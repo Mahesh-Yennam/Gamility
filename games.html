@@ -172,12 +172,51 @@
       <div class="container">
         <!-- Status Bar -->
         <div class="games-counter-bar">
-          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">14</strong> games</span>
+          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">15</strong> games</span>
           <span>⚡ Instant in-browser play</span>
         </div>
 
         <!-- Games Grid -->
         <div class="cards-grid" id="gamesGrid">
+          
+          <!-- Game: Hit the Mosquito -->
+          <article class="game-card" data-category="arcade" data-controls="Click / Tap / Space to Pause" data-game-url="games/hit-the-mosquito/index.html">
+            <div class="game-card-media">
+              <span class="game-badge" style="background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.35);">Arcade</span>
+              <span class="game-rating-tag">★ 4.9</span>
+              <div class="game-card-thumb-art">
+                <svg class="svg-art-icon" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="28" fill="#78350f" fill-opacity="0.3"/>
+                  <!-- Warm Lamp Light Cone -->
+                  <path d="M22 6 L42 6 L52 58 L12 58 Z" fill="#fef08a" fill-opacity="0.18"/>
+                  <circle cx="32" cy="10" r="4" fill="#fbbf24"/>
+                  <!-- Flyswatter -->
+                  <g transform="rotate(-20 32 32)">
+                    <rect x="22" y="16" width="20" height="22" rx="4" fill="#ef4444" stroke="#991b1b" stroke-width="1.2"/>
+                    <line x1="32" y1="38" x2="32" y2="54" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/>
+                  </g>
+                  <!-- Mosquito -->
+                  <circle cx="44" cy="24" r="3.5" fill="#451a03"/>
+                  <ellipse cx="40" cy="20" rx="3" ry="1.2" fill="#cbd5e1" fill-opacity="0.7"/>
+                  <ellipse cx="48" cy="20" rx="3" ry="1.2" fill="#cbd5e1" fill-opacity="0.7"/>
+                  <circle cx="43" cy="23" r="0.8" fill="#ef4444"/>
+                  <circle cx="45" cy="23" r="0.8" fill="#ef4444"/>
+                </svg>
+              </div>
+            </div>
+            <div class="game-card-body">
+              <div class="game-card-tags">
+                <span class="game-tag-pill">Mosquito Swatter</span>
+                <span class="game-tag-pill">Reflex Arcade</span>
+              </div>
+              <h3 class="game-card-title">Hit the Mosquito</h3>
+              <p class="game-card-desc">Cozy evening reflex comedy! Swat pesky buzzing mosquitoes hovering around your reading lamp with your flyswatter. Don't hit the friendly honeybee!</p>
+              <div class="game-card-footer">
+                <a href="games/hit-the-mosquito/index.html" class="btn btn-secondary btn-sm" title="Open standalone game page" target="_blank">Direct ↗</a>
+                <a href="games/hit-the-mosquito/index.html" class="game-play-btn" style="flex: 1; text-align: center;">Play Now ▶</a>
+              </div>
+            </div>
+          </article>
           
           <!-- Game: Pop the Balloon -->
           <article class="game-card" data-category="arcade" data-controls="Click / Tap / Space to Pause" data-game-url="games/pop-the-balloon/index.html">
