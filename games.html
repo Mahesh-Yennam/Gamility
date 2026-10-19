@@ -172,12 +172,43 @@
       <div class="container">
         <!-- Status Bar -->
         <div class="games-counter-bar">
-          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">12</strong> games</span>
+          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">13</strong> games</span>
           <span>⚡ Instant in-browser play</span>
         </div>
 
         <!-- Games Grid -->
         <div class="cards-grid" id="gamesGrid">
+          
+          <!-- Game: Grab the Crab -->
+          <article class="game-card" data-category="arcade" data-controls="Click / Tap / Space to Pause" data-game-url="games/grab-the-crab/index.html">
+            <div class="game-card-media">
+              <span class="game-badge" style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.35);">Arcade</span>
+              <span class="game-rating-tag">★ 4.9</span>
+              <div class="game-card-thumb-art">
+                <svg class="svg-art-icon" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="28" fill="#0284c7" fill-opacity="0.25"/>
+                  <ellipse cx="32" cy="46" rx="20" ry="8" fill="#ca8a04"/>
+                  <ellipse cx="32" cy="36" rx="14" ry="10" fill="#ef4444"/>
+                  <circle cx="27" cy="24" r="3.5" fill="#ffffff"/>
+                  <circle cx="28" cy="24" r="1.8" fill="#1e293b"/>
+                  <circle cx="37" cy="24" r="3.5" fill="#ffffff"/>
+                  <circle cx="36" cy="24" r="1.8" fill="#1e293b"/>
+                </svg>
+              </div>
+            </div>
+            <div class="game-card-body">
+              <div class="game-card-tags">
+                <span class="game-tag-pill">Whack-a-Mole</span>
+                <span class="game-tag-pill">Beach Reflex</span>
+              </div>
+              <h3 class="game-card-title">Grab the Crab</h3>
+              <p class="game-card-desc">Fast-paced beach reflex arcade! Catch cute crabs popping from sand burrows while avoiding spiky pufferfish hazards.</p>
+              <div class="game-card-footer">
+                <a href="games/grab-the-crab/index.html" class="btn btn-secondary btn-sm" title="Open standalone game page" target="_blank">Direct ↗</a>
+                <a href="games/grab-the-crab/index.html" class="game-play-btn" style="flex: 1; text-align: center;">Play Now ▶</a>
+              </div>
+            </div>
+          </article>
           
           <!-- Game 1: Neon Retro Arcade -->
           <article class="game-card" data-category="arcade" data-controls="Arrow Keys / A, D / Touch / Mouse" data-game-url="games/neon-retro-arcade/index.html">
