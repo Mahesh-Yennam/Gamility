@@ -1,11 +1,11 @@
-# 🎮 Gamility — Free Web Games & Smart Everyday Utility Tools
+# 🎮 Gamility — Free Web Games, Smart Utility Tools & Interactive Explorers
 
 <p align="center">
   <img src="assets/images/og-preview.jpg" alt="Gamility Social Banner" width="100%" style="border-radius: 12px;" />
 </p>
 
 <p align="center">
-  <strong>Instant browser-ready HTML5 games and privacy-first productivity utility tools. Zero downloads. Zero installations. 100% Free.</strong>
+  <strong>Instant browser-ready HTML5 games, privacy-first productivity utility tools, and interactive educational discovery explorers. Zero downloads. Zero installations. 100% Free.</strong>
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@
 
 ## 🌟 Overview
 
-**Gamility** (a portmanteau of *Games* + *Utility*) is a modern, high-performance static web portal designed to give users instant access to casual web games and essential productivity tools in one clean, distraction-free interface.
+**Gamility** is a modern, high-performance static web portal designed to give users instant access to casual web games, everyday productivity tools, and interactive discovery explorers in one clean, distraction-free interface.
 
 Everything is built from scratch with pure **Vanilla HTML5, CSS3, and ES6 JavaScript** — eliminating framework overhead to achieve near-instant page load speeds and 100% client-side privacy.
 
@@ -40,6 +40,13 @@ Everything is built from scratch with pure **Vanilla HTML5, CSS3, and ES6 JavaSc
 - **100% Client-Side Privacy**: All data calculations execute locally in your browser. Zero text, passwords, or images ever leave your device.
 - **Interactive Workspace Modal**: Built-in modal playground with real-time text testing.
 
+### 🧭 Interactive Explorers Hub (`explorer.html`)
+- **Deep-Dive Knowledge Applications**: Rich, visual, interactive educational explorers designed for science, geography, biology, and the arts:
+  - 🦁 **The Living World: Animal Encyclopedia** (`explorer/animal-encyclopedia/`): 39 animal species across 7 terrestrial & marine biomes, authentic biological audio calls, IUCN Red List conservation statuses, comparative anatomy scales, and an interactive biology trivia quiz.
+  - 🗺️ **The Global Sphere: World Countries Atlas** (`explorer/world-atlas/`): 50 sovereign nations across 6 continents, high-resolution vector flags, capitals, currencies, live real-time timezone clocks, head-to-head comparison matrix, and a geography quiz master.
+  - 🎵 **The Harmonic Realm: Musical Instruments** (`explorer/musical-instruments/`): Organological archive of 35 instruments across 5 families, real-time procedural Web Audio sound synthesis, frequency spectrum benchmarks, acoustic comparator, and ear-training quizzes.
+- **Instant Domain Filtering & Search**: Filter discovery apps across Biology, Geography, Culture, and Science.
+
 ### 📬 Integrations
 - **FormSubmit.co Contact Form**: Connected via encrypted token with background AJAX `fetch()`, anti-spam honeypot (`_honey`), and instant inline success feedback.
 - **Google Sheets Newsletter**: Pre-wired to an automated Google Apps Script Web App to log subscriber emails as new rows in a private spreadsheet.
@@ -57,9 +64,10 @@ Everything is built from scratch with pure **Vanilla HTML5, CSS3, and ES6 JavaSc
 
 ```
 gamility/
-├── index.html                   # Home page (Hero, live search, trending games & tools)
+├── index.html                   # Home page (Hero, live search, trending hubs)
 ├── games.html                   # Games hub catalog with category tabs & modal player
 ├── tools.html                   # Utility tools hub catalog with category tabs & workspace
+├── explorer.html                # Interactive explorers hub with domain search
 ├── about.html                   # Mission, platform facts, core pillars & FAQ accordion
 ├── contact.html                 # Contact form powered by FormSubmit (AJAX + honeypot)
 ├── privacy.html                 # Privacy policy & client-side guarantee
@@ -68,7 +76,6 @@ gamility/
 ├── robots.txt                   # Search crawler directives
 ├── sitemap.xml                  # XML search engine sitemap
 ├── site.webmanifest             # Web App Manifest for mobile installation
-├── Website_Creation_Master_Guide.pdf # Printable PDF Web Development Guide
 ├── assets/
 │   ├── css/
 │   │   └── styles.css           # Global design system, dark mode & responsive queries
@@ -79,6 +86,9 @@ gamility/
 │       └── og-preview.jpg       # High-resolution social media sharing banner
 └── README.md                    # Project documentation
 ```
+
+> **Note on Standalone Apps**: Interactive explorer sub-applications (e.g. `explorer/animal-encyclopedia/`, `explorer/world-atlas/`, `explorer/musical-instruments/`) as well as standalone games and tools are modular and can be linked as submodules or independent repositories.
+
 
 ---
 
@@ -131,23 +141,26 @@ Then visit `http://localhost:8000` in your web browser.
 
 ## 🛰️ Hub-and-Spoke Architecture (Adding Individual Apps)
 
-Gamility is designed to act as the central master portal for a network of standalone tools and games:
+Gamility is designed to act as the central master portal for a network of standalone games, utility tools, and interactive explorers:
 
 ```mermaid
 graph TD
-    Hub[Gamility Master Portal<br/>gamility.github.io/gamility] -->|Embedded Iframe / Direct Link| Game1[Pixel Snake<br/>username.github.io/pixel-snake]
-    Hub -->|Embedded Iframe / Direct Link| Tool1[Word Counter<br/>username.github.io/word-counter]
-    Hub -->|Embedded Iframe / Direct Link| Tool2[Password Generator<br/>username.github.io/password-gen]
+    Hub[Gamility Master Portal<br/>gamility.github.io/gamility] -->|Direct Link / Launch| Exp1[Animal Encyclopedia<br/>explorer/animal-encyclopedia]
+    Hub -->|Direct Link / Launch| Exp2[World Countries Atlas<br/>explorer/world-atlas]
+    Hub -->|Embedded / Direct Link| Game1[Pixel Snake Classic<br/>games/pixel-snake]
+    Hub -->|Embedded / Direct Link| Tool1[Password Generator<br/>tools/password-gen]
     
+    Exp1 -.->|'Return to Gamility'| Hub
+    Exp2 -.->|'Return to Gamility'| Hub
     Game1 -.->|'Discover More on Gamility'| Hub
     Tool1 -.->|'Powered by Gamility'| Hub
 ```
 
-Whenever you build a new standalone repository (e.g. `github.com/<username>/word-counter`), simply add its live link to the card in `tools.html` or `games.html`:
+Whenever you build a new standalone repository (e.g. `github.com/<username>/animal-encyclopedia`), simply add its live URL to the corresponding card in `explorer.html`, `games.html`, or `tools.html`:
 ```html
-<article class="tool-card" data-url="https://<username>.github.io/word-counter/">
+<article class="tool-card" data-tool-url="https://<username>.github.io/animal-encyclopedia/">
   ...
-  <button type="button" class="tool-action-btn btn-tool-trigger">Launch Tool →</button>
+  <a href="https://<username>.github.io/animal-encyclopedia/" class="tool-action-btn">Launch Explorer →</a>
 </article>
 ```
 
