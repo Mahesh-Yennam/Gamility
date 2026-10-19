@@ -9,10 +9,11 @@
 </p>
 
 <p align="center">
+  <a href="https://mahesh-yennam.github.io/Gamility/"><img src="https://img.shields.io/badge/Live_Site-mahesh--yennam.github.io%2FGamility-0ea5e9?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Live Site" /></a>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
   <img src="https://img.shields.io/badge/Vanilla_CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Hosted_on-GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages" />
+  <a href="https://mahesh-yennam.github.io/Gamility/"><img src="https://img.shields.io/badge/Hosted_on-GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages" /></a>
   <img src="https://img.shields.io/badge/SEO-Optimized-10b981?style=for-the-badge&logo=google&logoColor=white" alt="SEO Ready" />
   <img src="https://img.shields.io/badge/Copyright-2026_Gamility-d97706?style=for-the-badge" alt="Copyright Gamility" />
 </p>
@@ -121,12 +122,12 @@ Then visit `http://localhost:8000` in your web browser.
    git add .
    git commit -m "Initial launch of Gamility static portal"
    git branch -M main
-   git remote add origin https://github.com/<your-username>/gamility.git
+   git remote add origin git@github-personal.com:Mahesh-Yennam/Gamility.git
    git push -u origin main
    ```
 
 2. **Enable GitHub Pages**:
-   - Go to your repository on GitHub.
+   - Go to your repository on GitHub: `https://github.com/Mahesh-Yennam/Gamility`
    - Navigate to **Settings** ➔ **Pages**.
    - Under **Build and deployment**:
      - **Source**: `Deploy from a branch`
@@ -134,8 +135,8 @@ Then visit `http://localhost:8000` in your web browser.
    - Click **Save**.
 
 3. **Your site is live!**  
-   It will be accessible at:  
-   `https://<your-username>.github.io/gamility/`
+   It is accessible at:  
+   👉 **[https://mahesh-yennam.github.io/Gamility/](https://mahesh-yennam.github.io/Gamility/)**
 
 ---
 
@@ -145,7 +146,7 @@ Gamility is designed to act as the central master portal for a network of standa
 
 ```mermaid
 graph TD
-    Hub[Gamility Master Portal<br/>gamility.github.io/gamility] -->|Direct Link / Launch| Exp1[Animal Encyclopedia<br/>explorer/animal-encyclopedia]
+    Hub[Gamility Master Portal<br/>mahesh-yennam.github.io/Gamility] -->|Direct Link / Launch| Exp1[Animal Encyclopedia<br/>explorer/animal-encyclopedia]
     Hub -->|Direct Link / Launch| Exp2[World Countries Atlas<br/>explorer/world-atlas]
     Hub -->|Embedded / Direct Link| Game1[Pixel Snake Classic<br/>games/pixel-snake]
     Hub -->|Embedded / Direct Link| Tool1[Password Generator<br/>tools/password-gen]
@@ -156,11 +157,11 @@ graph TD
     Tool1 -.->|'Powered by Gamility'| Hub
 ```
 
-Whenever you build a new standalone repository (e.g. `github.com/<username>/animal-encyclopedia`), simply add its live URL to the corresponding card in `explorer.html`, `games.html`, or `tools.html`:
+Whenever you build a new standalone repository (e.g. `github.com/Mahesh-Yennam/animal-encyclopedia`), simply add its live URL to the corresponding card in `explorer.html`, `games.html`, or `tools.html`:
 ```html
-<article class="tool-card" data-tool-url="https://<username>.github.io/animal-encyclopedia/">
+<article class="tool-card" data-tool-url="https://mahesh-yennam.github.io/animal-encyclopedia/">
   ...
-  <a href="https://<username>.github.io/animal-encyclopedia/" class="tool-action-btn">Launch Explorer →</a>
+  <a href="https://mahesh-yennam.github.io/animal-encyclopedia/" class="tool-action-btn">Launch Explorer →</a>
 </article>
 ```
 
