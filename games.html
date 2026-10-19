@@ -172,12 +172,48 @@
       <div class="container">
         <!-- Status Bar -->
         <div class="games-counter-bar">
-          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">13</strong> games</span>
+          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">14</strong> games</span>
           <span>⚡ Instant in-browser play</span>
         </div>
 
         <!-- Games Grid -->
         <div class="cards-grid" id="gamesGrid">
+          
+          <!-- Game: Pop the Balloon -->
+          <article class="game-card" data-category="arcade" data-controls="Click / Tap / Space to Pause" data-game-url="games/pop-the-balloon/index.html">
+            <div class="game-card-media">
+              <span class="game-badge" style="background: rgba(14, 165, 233, 0.2); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.35);">Arcade</span>
+              <span class="game-rating-tag">★ 4.9</span>
+              <div class="game-card-thumb-art">
+                <svg class="svg-art-icon" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="28" fill="#0284c7" fill-opacity="0.3"/>
+                  <path d="M12 48 Q20 40 32 44 Q44 38 52 48 Z" fill="#ffffff" fill-opacity="0.35"/>
+                  <!-- String -->
+                  <path d="M32 44 Q30 50 34 54 T31 60" stroke="#f1f5f9" stroke-width="1.8" stroke-linecap="round"/>
+                  <!-- Knot -->
+                  <polygon points="30,44 34,44 32,41" fill="#c0392b"/>
+                  <!-- Balloon -->
+                  <ellipse cx="32" cy="27" rx="14" ry="17" fill="#ff4757"/>
+                  <!-- Specular Sheen -->
+                  <ellipse cx="26" cy="19" rx="3.5" ry="6" transform="rotate(-25 26 19)" fill="#ffffff" fill-opacity="0.65"/>
+                  <!-- Sparkle -->
+                  <circle cx="48" cy="18" r="1.8" fill="#fde047"/>
+                </svg>
+              </div>
+            </div>
+            <div class="game-card-body">
+              <div class="game-card-tags">
+                <span class="game-tag-pill">Balloon Pop</span>
+                <span class="game-tag-pill">Sky Reflex</span>
+              </div>
+              <h3 class="game-card-title">Pop the Balloon</h3>
+              <p class="game-card-desc">Sky reflex pop arcade! Pop colorful rising balloons into confetti showers before they fly away. Avoid explosive bomb hazards!</p>
+              <div class="game-card-footer">
+                <a href="games/pop-the-balloon/index.html" class="btn btn-secondary btn-sm" title="Open standalone game page" target="_blank">Direct ↗</a>
+                <a href="games/pop-the-balloon/index.html" class="game-play-btn" style="flex: 1; text-align: center;">Play Now ▶</a>
+              </div>
+            </div>
+          </article>
           
           <!-- Game: Grab the Crab -->
           <article class="game-card" data-category="arcade" data-controls="Click / Tap / Space to Pause" data-game-url="games/grab-the-crab/index.html">
