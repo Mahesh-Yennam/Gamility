@@ -1,0 +1,16 @@
+{
+  "name": "Gamility - Free Games & Utility Tools",
+  "short_name": "Gamility",
+  "description": "Play free online web games and access everyday smart utility tools.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0a0e17",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

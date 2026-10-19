@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Gamility - Where Play Meets Everyday Productivity</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Learn about Gamility's mission: providing instant, free browser games and lightweight, private utility tools without downloads, paywalls, or invasive tracking.">
+  <meta name="keywords" content="about gamility, free web games platform, privacy first online tools, browser utility tools, html5 games hub">
+  <meta name="author" content="Gamility">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gamility.com/about.html">
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gamility.com/about.html">
+  <meta property="og:title" content="About Gamility - Where Play Meets Everyday Productivity">
+  <meta property="og:description" content="Discover why Gamility was built: fast, fun online games and private everyday utilities in your browser.">
+  <meta property="og:image" content="https://gamility.com/assets/images/og-preview.jpg">
+  <meta property="og:site_name" content="Gamility">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Gamility - Where Play Meets Everyday Productivity">
+  <meta name="twitter:description" content="Discover why Gamility was built: fast, fun online games and private everyday utilities in your browser.">
+  <meta name="twitter:image" content="https://gamility.com/assets/images/og-preview.jpg">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0a0e17">
+
+  <!-- Google Fonts Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Gamility",
+    "description": "Learn about the mission, features, and technology behind the Gamility web gaming and utility tools platform.",
+    "url": "https://gamility.com/about.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Gamility",
+      "url": "https://gamility.com/",
+      "logo": "https://gamility.com/assets/images/favicon.svg"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Gamility Home">
+        <div class="brand-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+          </svg>
+        </div>
+        <span class="brand-name">Gami<span>lity</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="games.html" class="nav-link">Games</a></li>
+          <li><a href="tools.html" class="nav-link">Utility Tools</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="games.html" class="btn btn-primary btn-sm">Explore Hub</a>
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Drawer">
+    <ul class="drawer-menu">
+      <li><a href="index.html" class="drawer-link">🏠 Home</a></li>
+      <li><a href="games.html" class="drawer-link">🎮 Games</a></li>
+      <li><a href="tools.html" class="drawer-link">🛠️ Utility Tools</a></li>
+      <li><a href="about.html" class="drawer-link active">ℹ️ About Us</a></li>
+      <li><a href="contact.html" class="drawer-link">✉️ Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="games.html" class="btn btn-primary" style="width: 100%;">Explore Games</a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       HERO BANNER
+       ========================================================================= -->
+  <main>
+    <section class="hub-hero">
+      <div class="container">
+        <div class="hero-pill-badge">
+          <span>✨</span> Mission & Story
+        </div>
+        <h1 class="hub-hero-title">
+          About <span class="gradient-text">Gamility</span>
+        </h1>
+        <p class="hub-hero-desc">
+          We built Gamility to bridge the gap between fast casual entertainment and private everyday utility tools in one seamless web destination.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         ABOUT STORY & HIGHLIGHTS
+         ========================================================================= -->
+    <section class="section-wrapper">
+      <div class="container">
+        <div class="about-intro-grid">
+          <div class="about-intro-text">
+            <h2>Fast, Free, and Built for the Open Web.</h2>
+            <p>
+              Most online game sites today are overloaded with intrusive popup ads, long load times, and mandatory account signups. Meanwhile, online utility tools frequently harvest user text or require paid subscriptions for simple daily tasks.
+            </p>
+            <p>
+              <strong>Gamility</strong> was created to solve that. Whether you have 5 minutes to play a classic arcade puzzle or need to generate a secure password, count characters in an article, or create a high-res QR code, Gamility gives you an instant, distraction-free playground.
+            </p>
+            <p>
+              Everything runs smoothly in your browser with zero installation, zero cookies tracking your personal data, and 100% free access.
+            </p>
+          </div>
+
+          <div class="about-highlight-card">
+            <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 1rem;">⚡ Quick Platform Facts</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem; color: var(--text-muted); font-size: 0.95rem;">
+              <li style="display: flex; gap: 0.6rem;">
+                <span style="color: var(--accent-emerald); font-weight: bold;">✓</span>
+                <span><strong>No App Installs:</strong> Runs directly in Chrome, Safari, Edge, and Firefox.</span>
+              </li>
+              <li style="display: flex; gap: 0.6rem;">
+                <span style="color: var(--accent-emerald); font-weight: bold;">✓</span>
+                <span><strong>Client-Side Processing:</strong> Tool computations run locally on your device.</span>
+              </li>
+              <li style="display: flex; gap: 0.6rem;">
+                <span style="color: var(--accent-emerald); font-weight: bold;">✓</span>
+                <span><strong>Mobile First:</strong> Optimized touch gestures and fluid mobile layouts.</span>
+              </li>
+              <li style="display: flex; gap: 0.6rem;">
+                <span style="color: var(--accent-emerald); font-weight: bold;">✓</span>
+                <span><strong>Lightweight Performance:</strong> Sub-second load times on mobile connections.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Core Pillars Grid -->
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">🎮</div>
+            <h3>Instant Web Gaming</h3>
+            <p>Engage in retro arcade favorites, Sudoku puzzles, endless runners, and tactical board games with zero friction.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">🛠️</div>
+            <h3>Smart Utilities</h3>
+            <p>Essential text analyzers, converters, cryptographic password generators, and developer formatting tools.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">🔒</div>
+            <h3>Privacy By Design</h3>
+            <p>We believe your daily calculations and texts should stay strictly on your device. We do not store or inspect your inputs.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">🚀</div>
+            <h3>Continual Expansion</h3>
+            <p>Our platform is continuously growing with community-requested game concepts and new digital productivity tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FREQUENTLY ASKED QUESTIONS (FAQ)
+         ========================================================================= -->
+    <section class="section-wrapper bg-subtle">
+      <div class="container">
+        <div class="section-header" style="justify-content: center; text-align: center; margin-bottom: 2.5rem;">
+          <div class="section-title-group">
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know about using Gamility</p>
+          </div>
+        </div>
+
+        <div class="faq-section-wrapper">
+          <div class="faq-list">
+            <!-- FAQ 1 -->
+            <div class="faq-item active">
+              <button type="button" class="faq-question">
+                <span>Are all the games and tools on Gamility free to use?</span>
+                <span class="faq-icon" aria-hidden="true">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, 100%! All web games and utility tools on Gamility are completely free to use. There are no paywalls, hidden premium subscriptions, or locked features.</p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question">
+                <span>Do I need to create an account or sign in?</span>
+                <span class="faq-icon" aria-hidden="true">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>No account or registration is required. You can jump straight into playing any game or utilizing any productivity tool the moment you land on the website.</p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question">
+                <span>Is my data private when using the utility tools?</span>
+                <span class="faq-icon" aria-hidden="true">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. All of our utility tools (word counting, password generation, unit conversion, color picking, and JSON formatting) operate entirely on your browser client. No text, passwords, or data are ever transmitted to or stored on external servers.</p>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question">
+                <span>Does Gamility work smoothly on mobile browsers?</span>
+                <span class="faq-icon" aria-hidden="true">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>Absolutely. The entire site is engineered with mobile-first responsive design. Whether you are using an iPhone, iPad, Android phone, or tablet, the games and tools scale smoothly with touch-friendly controls.</p>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <button type="button" class="faq-question">
+                <span>How can I suggest a new game or tool?</span>
+                <span class="faq-icon" aria-hidden="true">▼</span>
+              </button>
+              <div class="faq-answer">
+                <p>We love user suggestions! You can visit our <a href="contact.html" style="color: var(--primary); text-decoration: underline;">Contact Page</a> and submit your suggestion via our direct form. We review all feedback and prioritize top requests in our roadmap.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CALL TO ACTION / CONTACT LINK
+         ========================================================================= -->
+    <div class="container cta-banner-wrapper">
+      <div class="cta-banner">
+        <h2>Have Questions or Partnership Inquiries?</h2>
+        <p>
+          We are always happy to hear from players, creators, and developers. Reach out to us anytime!
+        </p>
+        <a href="contact.html" class="btn btn-primary">
+          <span>✉️</span> Get in Touch With Us
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Gamility Home">
+            <div class="brand-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+              </svg>
+            </div>
+            <span class="brand-name">Gami<span>lity</span></span>
+          </a>
+          <p>
+            Your favorite destination for free casual browser games and everyday smart utility tools. Simple, fast, and accessible for everyone.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">All Games</a></li>
+            <li><a href="tools.html">Utility Tools</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="games.html">Arcade Games</a></li>
+            <li><a href="games.html">Brain & Puzzle</a></li>
+            <li><a href="tools.html">Text Utilities</a></li>
+            <li><a href="tools.html">Security Tools</a></li>
+            <li><a href="tools.html">Calculators</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter / Updates -->
+        <div class="footer-col footer-newsletter">
+          <h4 class="footer-heading">Stay Updated</h4>
+          <p>Get notified when we launch new games and tools. No spam ever.</p>
+          <form class="footer-form" id="footerNewsletterForm">
+            <input type="email" class="footer-input" placeholder="Your email address" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> <strong>Gamility</strong>. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

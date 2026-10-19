@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#6366f1" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0a0e17"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#brandGrad)" fill-opacity="0.15" stroke="url(#brandGrad)" stroke-width="2"/>
+  <!-- Gamepad + Spark Shape -->
+  <path d="M20 22C16 22 13 25 13 29C13 35 17 41 22 41C24 41 25.5 39.5 27 38L30 35C31.2 33.8 32.8 33.8 34 35L37 38C38.5 39.5 40 41 42 41C47 41 51 35 51 29C51 25 48 22 44 22H20Z" fill="url(#brandGrad)" filter="url(#glow)"/>
+  <!-- D-Pad -->
+  <path d="M22 28V34M19 31H25" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <!-- Action Buttons -->
+  <circle cx="41" cy="29" r="1.5" fill="#ffffff"/>
+  <circle cx="45" cy="33" r="1.5" fill="#ffffff"/>
+</svg>

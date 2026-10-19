@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamility - Free Online Games & Smart Everyday Utility Tools</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Gamility is your ultimate hub for free online browser games and everyday utility tools. Play retro arcade, puzzle, and action games, or use fast calculators, password generators, and converters. Zero downloads required.">
+  <meta name="keywords" content="free web games, online games, utility tools, word counter, password generator, unit converter, browser games, html5 games, free online tools">
+  <meta name="author" content="Gamility">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gamility.com/">
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gamility.com/">
+  <meta property="og:title" content="Gamility - Free Online Games & Smart Everyday Utility Tools">
+  <meta property="og:description" content="Play instant web games and use helpful productivity tools right in your browser. Fast, responsive, and 100% free.">
+  <meta property="og:image" content="https://gamility.com/assets/images/og-preview.jpg">
+  <meta property="og:site_name" content="Gamility">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gamility - Free Online Games & Smart Everyday Utility Tools">
+  <meta name="twitter:description" content="Play instant web games and use helpful productivity tools right in your browser. Fast, responsive, and 100% free.">
+  <meta name="twitter:image" content="https://gamility.com/assets/images/og-preview.jpg">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0a0e17">
+
+  <!-- Google Fonts Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Gamility",
+    "url": "https://gamility.com/",
+    "description": "Your ultimate hub for free online browser games and everyday utility tools.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://gamility.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Gamility Home">
+        <div class="brand-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+          </svg>
+        </div>
+        <span class="brand-name">Gami<span>lity</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="games.html" class="nav-link">Games</a></li>
+          <li><a href="tools.html" class="nav-link">Utility Tools</a></li>
+          <li><a href="explorer.html" class="nav-link">Explorer</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="games.html" class="btn btn-primary btn-sm">Explore All</a>
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Drawer">
+    <ul class="drawer-menu">
+      <li><a href="index.html" class="drawer-link active">🏠 Home</a></li>
+      <li><a href="games.html" class="drawer-link">🎮 Games</a></li>
+      <li><a href="tools.html" class="drawer-link">🛠️ Utility Tools</a></li>
+      <li><a href="explorer.html" class="drawer-link">🌍 Explorer</a></li>
+      <li><a href="about.html" class="drawer-link">ℹ️ About Us</a></li>
+      <li><a href="contact.html" class="drawer-link">✉️ Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="games.html" class="btn btn-primary" style="width: 100%;">Play Games Now</a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <main>
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-pill-badge">
+          <span>✨</span> The All-In-One Hub for Fun & Productivity
+        </div>
+
+        <h1 class="hero-title">
+          Play Free Web <span class="gradient-text">Games</span> & Access Smart <span class="gradient-text-alt">Tools</span>
+        </h1>
+
+        <p class="hero-desc">
+          Zero downloads. Instant browser-ready games and smart utility tools built for speed, simplicity, and delight. Start playing or calculate right away.
+        </p>
+
+        <!-- Call to Action Buttons -->
+        <div class="hero-cta-group">
+          <a href="games.html" class="btn btn-primary">
+            <span>🎮</span> Explore Games
+          </a>
+          <a href="tools.html" class="btn btn-secondary">
+            <span>🛠️</span> Browse Utility Tools
+          </a>
+        </div>
+
+        <!-- Live Quick Search Box -->
+        <div class="hero-search-wrapper">
+          <input 
+            type="search" 
+            id="heroSearchInput" 
+            class="search-input-box" 
+            placeholder="Search any game or tool (e.g. Sudoku, Password, QR Code)..." 
+            aria-label="Search games and utility tools"
+          >
+          <div class="search-btn-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Stat Pill Badges -->
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <span class="stat-icon">✓</span>
+            <span><strong>50+</strong> Free Games</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">✓</span>
+            <span><strong>30+</strong> Handy Tools</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">✓</span>
+            <span><strong>Zero</strong> Installs Required</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">✓</span>
+            <span><strong>100%</strong> Mobile Friendly</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FEATURED GAMES SECTION
+         ========================================================================= -->
+    <section class="section-wrapper" id="featured-games">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2>🔥 Trending Games</h2>
+            <p>Popular web games you can play instantly in your browser</p>
+          </div>
+          <a href="games.html" class="view-all-link">
+            <span>View All Games</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Game Card 1: Neon Retro Arcade -->
+          <article class="game-card">
+            <div class="game-card-media">
+              <span class="game-badge">Arcade</span>
+              <span class="game-rating-tag">★ 4.9</span>
+              <div class="game-card-thumb-art">
+                <svg class="svg-art-icon" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="28" fill="#6366f1" fill-opacity="0.2"/>
+                  <rect x="18" y="24" width="28" height="18" rx="4" stroke="#6366f1" stroke-width="2.5"/>
+                  <circle cx="25" cy="33" r="2" fill="#38bdf8"/>
+                  <circle cx="39" cy="33" r="2" fill="#f43f5e"/>
+                </svg>
+              </div>
+            </div>
+            <div class="game-card-body">
+              <h3 class="game-title">Neon Retro Arcade</h3>
+              <p class="game-desc">Relive the 80s arcade rush! Dodge obstacles, collect glowing power-ups, and beat high scores.</p>
+              <div class="game-card-footer">
+                <span class="game-meta-plays">🕹️ 12.4k Plays</span>
+                <a href="games/neon-retro-arcade/index.html" class="btn btn-primary btn-sm">Play Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Game Card 2: Galactic Space Shooter -->
+          <article class="game-card">
+            <div class="game-card-media">
+              <span class="game-badge">Action</span>
+              <span class="game-rating-tag">★ 4.8</span>
+              <div class="game-card-thumb-art">
+                <svg class="svg-art-icon" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="28" fill="#06b6d4" fill-opacity="0.2"/>
+                  <polygon points="32,16 44,44 32,38 20,44" fill="#06b6d4" fill-opacity="0.7" stroke="#38bdf8" stroke-width="2"/>
+                </svg>
+              </div>
+            </div>
+            <div class="game-card-body">
+              <h3 class="game-title">Galactic Space Shooter</h3>
+              <p class="game-desc">Pilot your starship through asteroid belts and defend the galaxy against alien fleets.</p>
+              <div class="game-card-footer">
+                <span class="game-meta-plays">🚀 9.8k Plays</span>
+                <a href="games/galactic-space-shooter/index.html" class="btn btn-primary btn-sm">Play Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Game Card 3: Sudoku Master Brain -->
+          <article class="game-card">
+            <div class="game-card-media">
+              <span class="game-badge">Puzzle</span>
+              <span class="game-rating-tag">★ 4.9</span>
+              <div class="game-card-thumb-art">
+                <svg class="svg-art-icon" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="28" fill="#a855f7" fill-opacity="0.2"/>
+                  <rect x="18" y="18" width="28" height="28" rx="4" stroke="#a855f7" stroke-width="2.5"/>
+                  <line x1="18" y1="27" x2="46" y2="27" stroke="#c084fc" stroke-width="1.5"/>
+                  <line x1="18" y1="36" x2="46" y2="36" stroke="#c084fc" stroke-width="1.5"/>
+                  <line x1="27" y1="18" x2="27" y2="46" stroke="#c084fc" stroke-width="1.5"/>
+                  <line x1="36" y1="18" x2="36" y2="46" stroke="#c084fc" stroke-width="1.5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="game-card-body">
+              <h3 class="game-title">Sudoku Master Brain</h3>
+              <p class="game-desc">Sharpen your mind with daily Sudoku puzzles ranging from Easy to Grandmaster difficulty.</p>
+              <div class="game-card-footer">
+                <span class="game-meta-plays">🧩 15.2k Plays</span>
+                <a href="games/sudoku-master/index.html" class="btn btn-primary btn-sm">Play Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Game Card 4: Block Puzzle Rush -->
+          <article class="game-card">
+            <div class="game-card-media">
+              <span class="game-badge">Casual</span>
+              <span class="game-rating-tag">★ 4.7</span>
+              <div class="game-card-thumb-art">
+                <svg class="svg-art-icon" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="28" fill="#10b981" fill-opacity="0.2"/>
+                  <rect x="20" y="20" width="10" height="10" rx="2" fill="#10b981"/>
+                  <rect x="34" y="20" width="10" height="10" rx="2" fill="#10b981"/>
+                  <rect x="20" y="34" width="10" height="10" rx="2" fill="#10b981"/>
+                  <rect x="34" y="34" width="10" height="10" rx="2" fill="#34d399"/>
+                </svg>
+              </div>
+            </div>
+            <div class="game-card-body">
+              <h3 class="game-title">Block Puzzle Rush</h3>
+              <p class="game-desc">Fit geometric shapes into grid rows to trigger satisfying combo clears and score multipliers.</p>
+              <div class="game-card-footer">
+                <span class="game-meta-plays">🎮 8.1k Plays</span>
+                <a href="games/block-puzzle-rush/index.html" class="btn btn-primary btn-sm">Play Now</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         POPULAR UTILITY TOOLS SECTION
+         ========================================================================= -->
+    <section class="section-wrapper bg-subtle" id="popular-tools">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2>⚡ Popular Utility Tools</h2>
+            <p>Smart, private, and instant tools to make everyday digital tasks easier</p>
+          </div>
+          <a href="tools.html" class="view-all-link">
+            <span>View All Tools</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Tool Card 1: Word Counter -->
+          <article class="tool-card">
+            <div class="tool-card-top">
+              <div class="tool-icon-box">📝</div>
+              <span class="tool-tag">Text Tool</span>
+            </div>
+            <h3 class="tool-title">Word & Character Counter</h3>
+            <p class="tool-desc">Count words, characters, sentences, paragraphs, and reading time in real-time as you type.</p>
+            <div class="tool-card-footer">
+              <a href="tools/word-counter/index.html" class="tool-action-btn">Launch Tool →</a>
+            </div>
+          </article>
+
+          <!-- Tool Card 2: Password Generator -->
+          <article class="tool-card">
+            <div class="tool-card-top">
+              <div class="tool-icon-box">🔐</div>
+              <span class="tool-tag">Security</span>
+            </div>
+            <h3 class="tool-title">Secure Password Generator</h3>
+            <p class="tool-desc">Generate strong, cryptographically secure passwords with custom lengths and character rules.</p>
+            <div class="tool-card-footer">
+              <a href="tools/password-generator/index.html" class="tool-action-btn">Launch Tool →</a>
+            </div>
+          </article>
+
+          <!-- Tool Card 3: QR Code Generator -->
+          <article class="tool-card">
+            <div class="tool-card-top">
+              <div class="tool-icon-box">📱</div>
+              <span class="tool-tag">Web Tool</span>
+            </div>
+            <h3 class="tool-title">Instant QR Code Maker</h3>
+            <p class="tool-desc">Create high-resolution downloadable QR codes for URLs, Wi-Fi credentials, text, and contacts.</p>
+            <div class="tool-card-footer">
+              <a href="tools/qr-code-maker/index.html" class="tool-action-btn">Launch Tool →</a>
+            </div>
+          </article>
+
+          <!-- Tool Card 4: Unit Converter -->
+          <article class="tool-card">
+            <div class="tool-card-top">
+              <div class="tool-icon-box">⚖️</div>
+              <span class="tool-tag">Calculators</span>
+            </div>
+            <h3 class="tool-title">Universal Unit Converter</h3>
+            <p class="tool-desc">Effortlessly convert units for length, weight, temperature, digital data size, speed, and time.</p>
+            <div class="tool-card-footer">
+              <a href="tools/unit-converter/index.html" class="tool-action-btn">Launch Tool →</a>
+            </div>
+          </article>
+
+          <!-- Tool Card 5: Color Code Converter -->
+          <article class="tool-card">
+            <div class="tool-card-top">
+              <div class="tool-icon-box">🎨</div>
+              <span class="tool-tag">Design</span>
+            </div>
+            <h3 class="tool-title">Color Palette & Picker</h3>
+            <p class="tool-desc">Pick and convert colors between HEX, RGB, HSL, and inspect contrast accessibility ratios.</p>
+            <div class="tool-card-footer">
+              <a href="tools/color-palette-picker/index.html" class="tool-action-btn">Launch Tool →</a>
+            </div>
+          </article>
+
+          <!-- Tool Card 6: Markdown Live Preview -->
+          <article class="tool-card">
+            <div class="tool-card-top">
+              <div class="tool-icon-box">📄</div>
+              <span class="tool-tag">Developer</span>
+            </div>
+            <h3 class="tool-title">Markdown Live Preview</h3>
+            <p class="tool-desc">Write formatted markdown on the fly with side-by-side synchronized live HTML rendering.</p>
+            <div class="tool-card-footer">
+              <a href="tools.html" class="tool-action-btn">Launch Tool →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         WHY GAMILITY / FEATURES SECTION
+         ========================================================================= -->
+    <section class="section-wrapper">
+      <div class="container">
+        <div class="section-header" style="justify-content: center; text-align: center; margin-bottom: 3rem;">
+          <div class="section-title-group">
+            <h2>Why Choose Gamility?</h2>
+            <p>Designed from the ground up for speed, privacy, and maximum accessibility</p>
+          </div>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">⚡</div>
+            <h3>Instant & Zero Setup</h3>
+            <p>No downloads, plugins, or registration needed. Everything runs seamlessly in your browser right away.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">🔒</div>
+            <h3>100% Client-Side Privacy</h3>
+            <p>Your data stays on your device. Our utility tools process text, passwords, and codes locally without server storage.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">📱</div>
+            <h3>Optimized for All Screens</h3>
+            <p>Whether you are on an iPhone, Android, iPad, or desktop monitor, Gamility adapts smoothly to your viewport.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-icon-wrapper">🆓</div>
+            <h3>Forever Free Access</h3>
+            <p>Enjoy our entire growing collection of web games and essential utility tools completely free of charge.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CALL TO ACTION / SUGGESTION BANNER
+         ========================================================================= -->
+    <div class="container cta-banner-wrapper">
+      <div class="cta-banner">
+        <h2>Have a Game or Tool Suggestion?</h2>
+        <p>
+          We are constantly adding new browser games and helpful productivity tools. Let us know what you want to see built next!
+        </p>
+        <a href="contact.html" class="btn btn-primary">
+          <span>📬</span> Suggest an Idea / Contact Us
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Gamility Home">
+            <div class="brand-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+              </svg>
+            </div>
+            <span class="brand-name">Gami<span>lity</span></span>
+          </a>
+          <p>
+            Your favorite destination for free casual browser games and everyday smart utility tools. Simple, fast, and accessible for everyone.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">All Games</a></li>
+            <li><a href="tools.html">Utility Tools</a></li>
+            <li><a href="explorer.html">Explorer Hub</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="games.html">Arcade Games</a></li>
+            <li><a href="games.html">Brain & Puzzle</a></li>
+            <li><a href="tools.html">Text Utilities</a></li>
+            <li><a href="tools.html">Security Tools</a></li>
+            <li><a href="tools.html">Calculators</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter / Updates -->
+        <div class="footer-col footer-newsletter">
+          <h4 class="footer-heading">Stay Updated</h4>
+          <p>Get notified when we launch new games and tools. No spam ever.</p>
+          <form class="footer-form" id="footerNewsletterForm">
+            <input type="email" class="footer-input" placeholder="Your email address" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> <strong>Gamility</strong>. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

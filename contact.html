@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Suggest Ideas - Gamility</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Get in touch with the Gamility team. Suggest a new web game or utility tool, report a bug, or reach out for partnerships. Fast response guaranteed.">
+  <meta name="keywords" content="contact gamility, suggest a game, suggest a tool, web game feedback, gamility support">
+  <meta name="author" content="Gamility">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gamility.com/contact.html">
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gamility.com/contact.html">
+  <meta property="og:title" content="Contact Us & Suggest Ideas - Gamility">
+  <meta property="og:description" content="Have a game or tool idea? Send a message to the Gamility team.">
+  <meta property="og:image" content="https://gamility.com/assets/images/og-preview.jpg">
+  <meta property="og:site_name" content="Gamility">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Us & Suggest Ideas - Gamility">
+  <meta name="twitter:description" content="Have a game or tool idea? Send a message to the Gamility team.">
+  <meta name="twitter:image" content="https://gamility.com/assets/images/og-preview.jpg">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0a0e17">
+
+  <!-- Google Fonts Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Gamility",
+    "description": "Contact form and community suggestion portal for Gamility games and utility tools.",
+    "url": "https://gamility.com/contact.html"
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Gamility Home">
+        <div class="brand-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+          </svg>
+        </div>
+        <span class="brand-name">Gami<span>lity</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="games.html" class="nav-link">Games</a></li>
+          <li><a href="tools.html" class="nav-link">Utility Tools</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="games.html" class="btn btn-primary btn-sm">Explore Games</a>
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Drawer">
+    <ul class="drawer-menu">
+      <li><a href="index.html" class="drawer-link">🏠 Home</a></li>
+      <li><a href="games.html" class="drawer-link">🎮 Games</a></li>
+      <li><a href="tools.html" class="drawer-link">🛠️ Utility Tools</a></li>
+      <li><a href="about.html" class="drawer-link">ℹ️ About Us</a></li>
+      <li><a href="contact.html" class="drawer-link active">✉️ Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="games.html" class="btn btn-primary" style="width: 100%;">Explore Games</a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       HERO BANNER
+       ========================================================================= -->
+  <main>
+    <section class="hub-hero">
+      <div class="container">
+        <div class="hero-pill-badge">
+          <span>📬</span> We Love Hearing From You
+        </div>
+        <h1 class="hub-hero-title">
+          Contact & <span class="gradient-text">Suggestions</span>
+        </h1>
+        <p class="hub-hero-desc">
+          Have a question, feedback, bug report, or want to suggest a new web game or everyday utility tool? Fill out
+          the form below.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CONTACT LAYOUT: INFO + FORMSUBMIT FORM
+         ========================================================================= -->
+    <section class="section-wrapper">
+      <div class="container">
+        <div class="contact-layout-grid">
+
+          <!-- Left Column: Information Card -->
+          <div class="contact-info-card">
+            <div>
+              <h3>Get in Touch</h3>
+              <p>
+                Gamility is community-driven. We actively read every submission and use your ideas to build future games
+                and utilities.
+              </p>
+            </div>
+
+            <!-- Fast Response Badge -->
+            <div class="contact-channel-item">
+              <div class="contact-channel-icon" style="color: var(--accent-emerald);">⚡</div>
+              <div>
+                <div class="contact-channel-title">Fast Turnaround</div>
+                <div class="contact-channel-desc">We usually respond within 24 to 48 hours for inquiries and feedback.
+                </div>
+              </div>
+            </div>
+
+            <!-- Game Suggestions -->
+            <div class="contact-channel-item">
+              <div class="contact-channel-icon" style="color: var(--primary);">🎮</div>
+              <div>
+                <div class="contact-channel-title">Suggest a Game</div>
+                <div class="contact-channel-desc">Tell us what arcade, puzzle, or retro concept you'd love to play next.
+                </div>
+              </div>
+            </div>
+
+            <!-- Tool Suggestions -->
+            <div class="contact-channel-item">
+              <div class="contact-channel-icon" style="color: var(--secondary);">🛠️</div>
+              <div>
+                <div class="contact-channel-title">Request a Utility Tool</div>
+                <div class="contact-channel-desc">Need a specific calculator, converter, or formatting generator? Let us
+                  build it!</div>
+              </div>
+            </div>
+
+            <!-- FAQ Teaser -->
+            <div
+              style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem;">
+              <span
+                style="font-size: 0.85rem; font-weight: 700; color: var(--text-main); display: block; margin-bottom: 0.25rem;">Looking
+                for quick answers?</span>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+                Check our Frequently Asked Questions section on the About page.
+              </p>
+              <a href="about.html" class="view-all-link" style="font-size: 0.85rem;">Visit FAQ Page →</a>
+            </div>
+          </div>
+
+          <!-- Right Column: FormSubmit Powered Form -->
+          <div class="contact-form-card">
+            <!-- 
+              FormSubmit.co Integration:
+              Replace 'your-email@example.com' with your actual email address 
+              when deploying live to receive submissions directly in your inbox.
+            -->
+            <form action="https://formsubmit.co/ajax/8669f12ae474f94d93c09cea99efa897" method="POST"
+              class="contact-form" id="gamilityContactForm">
+              <!-- Anti-Spam Honeypot Field -->
+              <input type="text" name="_honey" style="display:none">
+
+              <!-- Disable reCAPTCHA for clean seamless UX -->
+              <input type="hidden" name="_captcha" value="false">
+
+              <!-- Email Subject -->
+              <input type="hidden" name="_subject" value="New Message from Gamility Visitor!">
+
+              <!-- Clean Table Format in Inbox -->
+              <input type="hidden" name="_template" value="table">
+
+              <!-- Form Inputs -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactName" class="form-label">Your Name <span class="req">*</span></label>
+                  <input type="text" id="contactName" name="name" class="contact-input" placeholder="e.g. Alex Morgan"
+                    required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label">Email Address <span class="req">*</span></label>
+                  <input type="email" id="contactEmail" name="email" class="contact-input"
+                    placeholder="alex@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactTopic" class="form-label">What is this regarding? <span class="req">*</span></label>
+                <select id="contactTopic" name="inquiry_type" class="contact-select" required>
+                  <option value="Game Suggestion">🎮 Suggest a New Web Game</option>
+                  <option value="Tool Suggestion">🛠️ Suggest a New Utility Tool</option>
+                  <option value="Bug Report">🐛 Report a Bug / Issue</option>
+                  <option value="General Feedback">💬 General Feedback or Question</option>
+                  <option value="Partnership">🤝 Partnership / Collaboration</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">Subject <span class="req">*</span></label>
+                <input type="text" id="contactSubject" name="subject" class="contact-input"
+                  placeholder="Brief summary of your message" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Your Message / Idea Details <span
+                    class="req">*</span></label>
+                <textarea id="contactMessage" name="message" class="contact-textarea"
+                  placeholder="Describe your suggestion, feedback, or inquiry in detail..." required></textarea>
+              </div>
+
+              <div class="form-notice">
+                <span>🔒</span>
+                <span>Your email is strictly used to reply to your message. We never send spam.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="padding: 0.85rem 1.5rem; font-size: 1rem;">
+                <span>🚀</span> Send Message
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Gamility Home">
+            <div class="brand-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+              </svg>
+            </div>
+            <span class="brand-name">Gami<span>lity</span></span>
+          </a>
+          <p>
+            Your favorite destination for free casual browser games and everyday smart utility tools. Simple, fast, and
+            accessible for everyone.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">All Games</a></li>
+            <li><a href="tools.html">Utility Tools</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="games.html">Arcade Games</a></li>
+            <li><a href="games.html">Brain & Puzzle</a></li>
+            <li><a href="tools.html">Text Utilities</a></li>
+            <li><a href="tools.html">Security Tools</a></li>
+            <li><a href="tools.html">Calculators</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter / Updates -->
+        <div class="footer-col footer-newsletter">
+          <h4 class="footer-heading">Stay Updated</h4>
+          <p>Get notified when we launch new games and tools. No spam ever.</p>
+          <form class="footer-form" id="footerNewsletterForm">
+            <input type="email" class="footer-input" placeholder="Your email address" required
+              aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> <strong>Gamility</strong>. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="contact.html" style="color: var(--primary);">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

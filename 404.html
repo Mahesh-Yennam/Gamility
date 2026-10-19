@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Gamility</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Oops! The page you were looking for could not be found on Gamility. Head back to play free games or explore our utility tools.">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0a0e17">
+
+  <!-- Google Fonts Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Gamility Home">
+        <div class="brand-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+          </svg>
+        </div>
+        <span class="brand-name">Gami<span>lity</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="games.html" class="nav-link">Games</a></li>
+          <li><a href="tools.html" class="nav-link">Utility Tools</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-primary btn-sm">Return Home</a>
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Drawer">
+    <ul class="drawer-menu">
+      <li><a href="index.html" class="drawer-link">🏠 Home</a></li>
+      <li><a href="games.html" class="drawer-link">🎮 Games</a></li>
+      <li><a href="tools.html" class="drawer-link">🛠️ Utility Tools</a></li>
+      <li><a href="about.html" class="drawer-link">ℹ️ About Us</a></li>
+      <li><a href="contact.html" class="drawer-link">✉️ Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- =========================================================================
+       404 ERROR CONTENT
+       ========================================================================= -->
+  <main class="error-page-wrapper">
+    <div class="container">
+      <div class="error-content-box" style="margin: 0 auto;">
+        <div class="hero-pill-badge" style="background: rgba(244, 63, 94, 0.12); border-color: rgba(244, 63, 94, 0.3); color: #fda4af;">
+          <span>👾</span> Level Not Found
+        </div>
+        <div class="error-code">404</div>
+        <h1 class="error-title">Game Over! Page Not Found</h1>
+        <p class="error-desc">
+          Looks like the coordinate map you followed led to an empty sector. Don't worry, your high score is safe! Let's get you back into the action.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="index.html" class="btn btn-primary">
+            <span>🏠</span> Return to Home
+          </a>
+          <a href="games.html" class="btn btn-secondary">
+            <span>🎮</span> Play Web Games
+          </a>
+          <a href="tools.html" class="btn btn-secondary">
+            <span>🛠️</span> Browse Tools
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> <strong>Gamility</strong>. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

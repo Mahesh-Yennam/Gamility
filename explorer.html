@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Explorer - Knowledge & Discovery | Gamility</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore interactive digital encyclopedias, planetary atlases, and educational discovery tools on Gamility. Deep-dive into wildlife biology, geography, arts, and science. 100% free and client-side.">
+  <meta name="keywords" content="interactive explorer, digital encyclopedia, animal encyclopedia, world atlas, interactive knowledge, biology tools, educational web apps">
+  <meta name="author" content="Gamility">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gamility.com/explorer.html">
+
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gamility.com/explorer.html">
+  <meta property="og:title" content="Interactive Explorer - Knowledge & Discovery | Gamility">
+  <meta property="og:description" content="Interactive visual archives, living encyclopedias, and planetary discovery applications. Built with 100% client-side privacy.">
+  <meta property="og:image" content="https://gamility.com/assets/images/og-preview.jpg">
+  <meta property="og:site_name" content="Gamility">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interactive Explorer - Knowledge & Discovery | Gamility">
+  <meta name="twitter:description" content="Interactive visual archives, living encyclopedias, and planetary discovery applications. Built with 100% client-side privacy.">
+  <meta name="twitter:image" content="https://gamility.com/assets/images/og-preview.jpg">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0a0e17">
+
+  <!-- Google Fonts Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Interactive Explorer - Gamility",
+    "description": "Collection of interactive educational discovery applications, encyclopedias, and atlases.",
+    "url": "https://gamility.com/explorer.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Gamility",
+      "url": "https://gamility.com/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Gamility Home">
+        <div class="brand-icon-wrapper">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+          </svg>
+        </div>
+        <span class="brand-name">Gami<span>lity</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="games.html" class="nav-link">Games</a></li>
+          <li><a href="tools.html" class="nav-link">Utility Tools</a></li>
+          <li><a href="explorer.html" class="nav-link active">Explorer</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="games.html" class="btn btn-primary btn-sm">🎮 Play Games</a>
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Drawer">
+    <ul class="drawer-menu">
+      <li><a href="index.html" class="drawer-link">🏠 Home</a></li>
+      <li><a href="games.html" class="drawer-link">🎮 Games</a></li>
+      <li><a href="tools.html" class="drawer-link">🛠️ Utility Tools</a></li>
+      <li><a href="explorer.html" class="drawer-link active">🌍 Explorer</a></li>
+      <li><a href="about.html" class="drawer-link">ℹ️ About Us</a></li>
+      <li><a href="contact.html" class="drawer-link">✉️ Contact</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="explorer/animal-encyclopedia/index.html" class="btn btn-primary" style="width: 100%;">🦁 Animal Encyclopedia</a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       HERO BANNER
+       ========================================================================= -->
+  <main>
+    <section class="hub-hero">
+      <div class="container">
+        <div class="hero-pill-badge">
+          <span>🌍</span> Interactive Knowledge Hub
+        </div>
+        <h1 class="hub-hero-title">
+          Explore, Learn & <span class="gradient-text-alt">Discover</span>
+        </h1>
+        <p class="hub-hero-desc">
+          Interactive visual archives, living encyclopedias, and planetary discovery applications. Built with 100% client-side privacy, zero downloads, and rich multimedia.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         STICKY FILTER TOOLBAR
+         ========================================================================= -->
+    <section class="hub-toolbar-wrapper" aria-label="Explorer Filter Toolbar">
+      <div class="container hub-toolbar">
+        <!-- Category Filter Tabs -->
+        <div class="filter-tabs-group" role="tablist">
+          <button class="filter-tab-btn tool-filter-btn active" data-category="all" role="tab" aria-selected="true">All Explorers</button>
+          <button class="filter-tab-btn tool-filter-btn" data-category="biology" role="tab" aria-selected="false">🦁 Living World & Biology</button>
+          <button class="filter-tab-btn tool-filter-btn" data-category="geography" role="tab" aria-selected="false">🗺️ Geography & Atlas</button>
+          <button class="filter-tab-btn tool-filter-btn" data-category="culture" role="tab" aria-selected="false">🎵 Arts & Culture</button>
+          <button class="filter-tab-btn tool-filter-btn" data-category="science" role="tab" aria-selected="false">🔬 Science & Cosmos</button>
+        </div>
+
+        <!-- Real-time Filter Search Input -->
+        <div class="hub-search-box-wrapper">
+          <input 
+            type="search" 
+            id="toolHubSearchInput" 
+            class="hub-search-input" 
+            placeholder="Search explorers by topic, subject, or domain..."
+            aria-label="Search explorer apps"
+          >
+          <div class="hub-search-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         EXPLORER CATALOG GRID
+         ========================================================================= -->
+    <section class="section-wrapper" style="padding-top: 2rem;">
+      <div class="container">
+        <!-- Status Bar -->
+        <div class="games-counter-bar">
+          <span>Showing <strong id="visibleToolsCount" style="color: var(--text-main);">6</strong> interactive discovery apps</span>
+          <span>🔒 100% Client-Side Privacy (Zero Remote Data Storage)</span>
+        </div>
+
+        <!-- Explorer Grid -->
+        <div class="cards-grid" id="toolsGrid">
+          
+          <!-- App 1: Animal Encyclopedia -->
+          <article class="tool-card" data-category="biology" data-tool-url="explorer/animal-encyclopedia/index.html">
+            <div class="tool-card-top">
+              <div class="tool-icon-box" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);">🦁</div>
+              <span class="tool-tag" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">Living World</span>
+            </div>
+            <h3 class="tool-title">The Living World: Animal Encyclopedia</h3>
+            <p class="tool-desc">Explore 39 species across 7 biomes. Features taxonomy dossiers, comparative anatomy scales, authentic wildlife audio calls, and a biology quiz.</p>
+            <div class="game-card-tags tool-card-tags">
+              <span class="game-tag-pill">39 Species</span>
+              <span class="game-tag-pill">Real Audio Calls</span>
+              <span class="game-tag-pill">IUCN Red List</span>
+            </div>
+            <div class="tool-card-footer">
+              <a href="explorer/animal-encyclopedia/index.html" class="btn btn-secondary btn-sm" title="Open standalone explorer" target="_blank">Direct ↗</a>
+              <a href="explorer/animal-encyclopedia/index.html" class="tool-action-btn" style="flex: 1; text-align: center;">Launch Explorer →</a>
+            </div>
+          </article>
+
+          <!-- App 2: World Countries Atlas -->
+          <article class="tool-card" data-category="geography" data-tool-url="explorer/world-atlas/index.html">
+            <div class="tool-card-top">
+              <div class="tool-icon-box" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">🗺️</div>
+              <span class="tool-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">Geography</span>
+            </div>
+            <h3 class="tool-title">The Global Sphere: World Countries Atlas</h3>
+            <p class="tool-desc">Searchable geopolitical atlas with country dossiers, vector flags, capitals, currencies, live timezone clocks, head-to-head comparator, and a geography quiz master.</p>
+            <div class="game-card-tags tool-card-tags">
+              <span class="game-tag-pill">50 Nations</span>
+              <span class="game-tag-pill">Live Clocks</span>
+              <span class="game-tag-pill">Comparator Matrix</span>
+            </div>
+            <div class="tool-card-footer">
+              <a href="explorer/world-atlas/index.html" class="btn btn-secondary btn-sm" title="Open standalone explorer" target="_blank">Direct ↗</a>
+              <a href="explorer/world-atlas/index.html" class="tool-action-btn" style="flex: 1; text-align: center;">Launch Explorer →</a>
+            </div>
+          </article>
+
+          <!-- App 3: Musical Instruments Explorer -->
+          <article class="tool-card" data-category="culture" data-tool-url="explorer/musical-instruments/index.html">
+            <div class="tool-card-top">
+              <div class="tool-icon-box" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3);">🎵</div>
+              <span class="tool-tag" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">Musicology</span>
+            </div>
+            <h3 class="tool-title">The Harmonic Realm: Musical Instruments</h3>
+            <p class="tool-desc">Acoustic physics and organology archive of 35 instruments across 5 families. Features real-time Web Audio sound synthesis, frequency benchmarks, and ear-training quizzes.</p>
+            <div class="game-card-tags tool-card-tags">
+              <span class="game-tag-pill">35 Instruments</span>
+              <span class="game-tag-pill">Synthesizer</span>
+              <span class="game-tag-pill">Comparator</span>
+            </div>
+            <div class="tool-card-footer">
+              <a href="explorer/musical-instruments/index.html" class="btn btn-secondary btn-sm" title="Open standalone explorer" target="_blank">Direct ↗</a>
+              <a href="explorer/musical-instruments/index.html" class="tool-action-btn" style="flex: 1; text-align: center;">Launch Explorer →</a>
+            </div>
+          </article>
+
+          <!-- App 4: Deep Ocean Odyssey -->
+          <article class="tool-card" data-category="science">
+            <div class="tool-card-top">
+              <div class="tool-icon-box" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">🌊</div>
+              <span class="tool-tag" style="background: rgba(99, 102, 241, 0.15); color: #a5b4fc;">Oceanography</span>
+            </div>
+            <h3 class="tool-title">Deep Ocean Trench Odyssey</h3>
+            <p class="tool-desc">A vertical bathymetric voyage from the sunlight epipelagic zone down to the hadal Challenger Deep trench, exploring hydrothermal vents and bioluminescent fauna.</p>
+            <div class="game-card-tags tool-card-tags">
+              <span class="game-tag-pill">Hadal Zones</span>
+              <span class="game-tag-pill">Bioluminescence</span>
+              <span class="game-tag-pill">Abyssal</span>
+            </div>
+            <div class="tool-card-footer">
+              <span class="btn btn-secondary btn-sm disabled" style="opacity: 0.6; cursor: not-allowed;">Planned</span>
+              <span class="tool-action-btn disabled" style="flex: 1; text-align: center; opacity: 0.6; cursor: not-allowed;">Coming Soon</span>
+            </div>
+          </article>
+
+          <!-- App 5: Solar System Navigator -->
+          <article class="tool-card" data-category="science">
+            <div class="tool-card-top">
+              <div class="tool-icon-box" style="background: rgba(236, 72, 153, 0.15); color: #ec4899; border: 1px solid rgba(236, 72, 153, 0.3);">🪐</div>
+              <span class="tool-tag" style="background: rgba(236, 72, 153, 0.15); color: #f472b6;">Astronomy</span>
+            </div>
+            <h3 class="tool-title">Space & Solar System Navigator</h3>
+            <p class="tool-desc">Interactive planetary orrery exploring orbital distances, rotational speeds, planetary compositions, magnetospheres, and historical deep space exploration probes.</p>
+            <div class="game-card-tags tool-card-tags">
+              <span class="game-tag-pill">Planetary Orrery</span>
+              <span class="game-tag-pill">Moons</span>
+              <span class="game-tag-pill">NASA & ESA</span>
+            </div>
+            <div class="tool-card-footer">
+              <span class="btn btn-secondary btn-sm disabled" style="opacity: 0.6; cursor: not-allowed;">Planned</span>
+              <span class="tool-action-btn disabled" style="flex: 1; text-align: center; opacity: 0.6; cursor: not-allowed;">Coming Soon</span>
+            </div>
+          </article>
+
+          <!-- App 6: Prehistoric Dinosaur Archive -->
+          <article class="tool-card" data-category="biology">
+            <div class="tool-card-top">
+              <div class="tool-icon-box" style="background: rgba(34, 197, 94, 0.15); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.3);">🦖</div>
+              <span class="tool-tag" style="background: rgba(34, 197, 94, 0.15); color: #4ade80;">Paleontology</span>
+            </div>
+            <h3 class="tool-title">Prehistoric Dinosaur Archive</h3>
+            <p class="tool-desc">Explore the Mesozoic era across the Triassic, Jurassic, and Cretaceous periods with skeletal profiles, dietary classifications, fossil discovery sites, and size comparisons.</p>
+            <div class="game-card-tags tool-card-tags">
+              <span class="game-tag-pill">Mesozoic Era</span>
+              <span class="game-tag-pill">Fossil Records</span>
+              <span class="game-tag-pill">Theropods</span>
+            </div>
+            <div class="tool-card-footer">
+              <span class="btn btn-secondary btn-sm disabled" style="opacity: 0.6; cursor: not-allowed;">Planned</span>
+              <span class="tool-action-btn disabled" style="flex: 1; text-align: center; opacity: 0.6; cursor: not-allowed;">Coming Soon</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Gamility Home">
+            <div class="brand-icon-wrapper">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+              </svg>
+            </div>
+            <span class="brand-name">Gami<span>lity</span></span>
+          </a>
+          <p>
+            Your favorite destination for free casual browser games, smart everyday utility tools, and interactive educational discovery apps.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Sections</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Online Games</a></li>
+            <li><a href="tools.html">Utility Tools</a></li>
+            <li><a href="explorer.html">Explorer Hub</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Discovery Domains -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Explorer Topics</h4>
+          <ul class="footer-links">
+            <li><a href="explorer/animal-encyclopedia/index.html">Animal Kingdom</a></li>
+            <li><a href="explorer.html">World Geography</a></li>
+            <li><a href="explorer.html">Arts & Culture</a></li>
+            <li><a href="explorer.html">Earth & Planetary</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter / Updates -->
+        <div class="footer-col footer-newsletter">
+          <h4 class="footer-heading">Stay Updated</h4>
+          <p>Get notified when we publish new interactive explorers, games, and tools.</p>
+          <form class="footer-form" id="footerNewsletterForm">
+            <input type="email" class="footer-input" placeholder="Your email address" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> <strong>Gamility</strong>. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
