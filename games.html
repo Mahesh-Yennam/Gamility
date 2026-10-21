@@ -172,12 +172,48 @@
       <div class="container">
         <!-- Status Bar -->
         <div class="games-counter-bar">
-          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">19</strong> games</span>
+          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">20</strong> games</span>
           <span>⚡ Instant in-browser play</span>
         </div>
 
         <!-- Games Grid -->
         <div class="cards-grid" id="gamesGrid">
+          
+          <!-- Game: Math Chain Quest -->
+          <article class="game-card" data-category="educational" data-controls="Click / Tap Cards / Keys 1-4" data-game-url="games/math-chain-quest/index.html">
+            <div class="game-card-media">
+              <span class="game-badge" style="background: rgba(6, 182, 212, 0.2); color: #0284c7; border: 1px solid rgba(6, 182, 212, 0.35);">Math Arcade</span>
+              <span class="game-rating-tag">★ 4.9</span>
+              <div class="game-card-thumb-art">
+                <svg class="svg-art-icon" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="28" fill="#0284c7" fill-opacity="0.25"/>
+                  <!-- Lower Node 8 -->
+                  <circle cx="21" cy="41" r="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.8"/>
+                  <text x="21" y="45.5" font-family="'Outfit', sans-serif" font-weight="900" font-size="11" fill="#ffffff" text-anchor="middle">8</text>
+                  <!-- Upper Node 16 -->
+                  <circle cx="43" cy="23" r="12" fill="#0f172a" stroke="#f59e0b" stroke-width="2.2"/>
+                  <text x="43" y="27.5" font-family="'Outfit', sans-serif" font-weight="900" font-size="11" fill="#fde047" text-anchor="middle">16</text>
+                  <!-- Connecting Lightning Arrow -->
+                  <path d="M28 36 L36 28 L32 28 L37 20 L27 30 L31 30 Z" fill="#f59e0b"/>
+                  <!-- Sparkles -->
+                  <circle cx="16" cy="18" r="2" fill="#38bdf8"/>
+                  <circle cx="50" cy="46" r="1.5" fill="#fde047"/>
+                </svg>
+              </div>
+            </div>
+            <div class="game-card-body">
+              <div class="game-card-tags">
+                <span class="game-tag-pill">Doubling Chain</span>
+                <span class="game-tag-pill">Multiplication</span>
+              </div>
+              <h3 class="game-card-title">Math Chain Quest</h3>
+              <p class="game-card-desc">High-energy mental math climber! Double numbers (4+4=8 ➔ 16 ➔ 32), conquer multiplication chains (×3, ×5, ×10), or halve in reverse with fast 4-choice cards.</p>
+              <div class="game-card-footer">
+                <a href="games/math-chain-quest/index.html" class="btn btn-secondary btn-sm" title="Open standalone game page" target="_blank">Direct ↗</a>
+                <a href="games/math-chain-quest/index.html" class="game-play-btn" style="flex: 1; text-align: center;">Play Now ▶</a>
+              </div>
+            </div>
+          </article>
           
           <!-- Game: Memory Quest Kids -->
           <article class="game-card" data-category="educational" data-controls="Click / Tap Cards" data-game-url="games/memory-quest-kids/index.html">
