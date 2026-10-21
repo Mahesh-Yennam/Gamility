@@ -172,12 +172,48 @@
       <div class="container">
         <!-- Status Bar -->
         <div class="games-counter-bar">
-          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">15</strong> games</span>
+          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">16</strong> games</span>
           <span>⚡ Instant in-browser play</span>
         </div>
 
         <!-- Games Grid -->
         <div class="cards-grid" id="gamesGrid">
+          
+          <!-- Game: Pop the Bubble -->
+          <article class="game-card" data-category="arcade" data-controls="Click / Tap / Space to Pause" data-game-url="games/pop-the-bubble/index.html">
+            <div class="game-card-media">
+              <span class="game-badge" style="background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.35);">Arcade</span>
+              <span class="game-rating-tag">★ 4.9</span>
+              <div class="game-card-thumb-art">
+                <svg class="svg-art-icon" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="28" fill="#581c87" fill-opacity="0.35"/>
+                  <!-- Sunset Horizon Glow -->
+                  <path d="M12 48 Q32 38 52 48 Z" fill="#f59e0b" fill-opacity="0.25"/>
+                  <!-- Soap Bubble Body -->
+                  <circle cx="32" cy="30" r="18" fill="#bae6fd" fill-opacity="0.25" stroke="#ffffff" stroke-width="1.2" stroke-opacity="0.8"/>
+                  <circle cx="32" cy="30" r="15" fill="#f472b6" fill-opacity="0.15"/>
+                  <!-- Specular Glass Crescent -->
+                  <path d="M23 18 C26 15, 33 15, 38 18 C39 19, 36 22, 33 21 C28 19, 25 21, 23 18 Z" fill="#ffffff" fill-opacity="0.9"/>
+                  <path d="M37 40 C40 38, 42 35, 43 32" stroke="#ffffff" stroke-width="1" stroke-linecap="round" fill="none" stroke-opacity="0.6"/>
+                  <!-- Droplets -->
+                  <circle cx="48" cy="18" r="1.5" fill="#38bdf8"/>
+                  <circle cx="16" cy="38" r="1.2" fill="#f472b6"/>
+                </svg>
+              </div>
+            </div>
+            <div class="game-card-body">
+              <div class="game-card-tags">
+                <span class="game-tag-pill">Soap Bubbles</span>
+                <span class="game-tag-pill">Sunset Reflex</span>
+              </div>
+              <h3 class="game-card-title">Pop the Bubble</h3>
+              <p class="game-card-desc">Dreamy sunset arcade! Pop glossy, clear iridescent soap bubbles floating in from all directions. Avoid the stinging electric jellyfish!</p>
+              <div class="game-card-footer">
+                <a href="games/pop-the-bubble/index.html" class="btn btn-secondary btn-sm" title="Open standalone game page" target="_blank">Direct ↗</a>
+                <a href="games/pop-the-bubble/index.html" class="game-play-btn" style="flex: 1; text-align: center;">Play Now ▶</a>
+              </div>
+            </div>
+          </article>
           
           <!-- Game: Hit the Mosquito -->
           <article class="game-card" data-category="arcade" data-controls="Click / Tap / Space to Pause" data-game-url="games/hit-the-mosquito/index.html">
