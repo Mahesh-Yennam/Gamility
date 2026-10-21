@@ -172,12 +172,53 @@
       <div class="container">
         <!-- Status Bar -->
         <div class="games-counter-bar">
-          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">18</strong> games</span>
+          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">19</strong> games</span>
           <span>⚡ Instant in-browser play</span>
         </div>
 
         <!-- Games Grid -->
         <div class="cards-grid" id="gamesGrid">
+          
+          <!-- Game: Memory Quest Kids -->
+          <article class="game-card" data-category="educational" data-controls="Click / Tap Cards" data-game-url="games/memory-quest-kids/index.html">
+            <div class="game-card-media">
+              <span class="game-badge" style="background: rgba(99, 102, 241, 0.2); color: #6366f1; border: 1px solid rgba(99, 102, 241, 0.35);">Memory</span>
+              <span class="game-rating-tag">★ 4.9</span>
+              <div class="game-card-thumb-art">
+                <svg class="svg-art-icon" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="28" fill="#4f46e5" fill-opacity="0.25"/>
+                  <!-- Card 1 (Left Tilted) -->
+                  <g transform="translate(22, 33) rotate(-10)">
+                    <rect x="-10" y="-15" width="20" height="30" rx="4" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.2"/>
+                    <rect x="-8" y="-13" width="16" height="26" rx="3" fill="#6366f1"/>
+                    <circle cx="0" cy="0" r="4.5" fill="#fde047"/>
+                  </g>
+                  <!-- Card 2 (Right Matching Twin) -->
+                  <g transform="translate(42, 31) rotate(10)">
+                    <rect x="-10" y="-15" width="20" height="30" rx="4" fill="#ffffff" stroke="#c7d2fe" stroke-width="1.2"/>
+                    <rect x="-8" y="-13" width="16" height="26" rx="3" fill="#6366f1"/>
+                    <circle cx="0" cy="0" r="4.5" fill="#fde047"/>
+                  </g>
+                  <!-- Sparkles -->
+                  <circle cx="32" cy="14" r="2" fill="#fde047"/>
+                  <circle cx="14" cy="46" r="1.5" fill="#38bdf8"/>
+                  <circle cx="50" cy="48" r="1.5" fill="#ec4899"/>
+                </svg>
+              </div>
+            </div>
+            <div class="game-card-body">
+              <div class="game-card-tags">
+                <span class="game-tag-pill">Card Matching</span>
+                <span class="game-tag-pill">Visual Memory</span>
+              </div>
+              <h3 class="game-card-title">Memory Quest Kids</h3>
+              <p class="game-card-desc">Playful 3D memory card match game for kids! Flip and match cute safari animals, space explorers, sweet treats, and juicy fruits across 12, 16, or 20 cards.</p>
+              <div class="game-card-footer">
+                <a href="games/memory-quest-kids/index.html" class="btn btn-secondary btn-sm" title="Open standalone game page" target="_blank">Direct ↗</a>
+                <a href="games/memory-quest-kids/index.html" class="game-play-btn" style="flex: 1; text-align: center;">Play Now ▶</a>
+              </div>
+            </div>
+          </article>
           
           <!-- Game: Number Quest Kids -->
           <article class="game-card" data-category="educational" data-controls="Click / Tap Blocks" data-game-url="games/number-quest-kids/index.html">
