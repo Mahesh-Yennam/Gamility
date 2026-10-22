@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFQ8M0VSFN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RFQ8M0VSFN');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interactive Explorer - Knowledge & Discovery | Gamility</title>
@@ -140,6 +150,7 @@
         <div class="filter-tabs-group" role="tablist">
           <button class="filter-tab-btn tool-filter-btn active" data-category="all" role="tab" aria-selected="true">All Explorers</button>
           <button class="filter-tab-btn tool-filter-btn" data-category="biology" role="tab" aria-selected="false">🦁 Living World & Biology</button>
+          <button class="filter-tab-btn tool-filter-btn" data-category="health" role="tab" aria-selected="false">🥗 Nutrition & Health</button>
           <button class="filter-tab-btn tool-filter-btn" data-category="geography" role="tab" aria-selected="false">🗺️ Geography & Atlas</button>
           <button class="filter-tab-btn tool-filter-btn" data-category="culture" role="tab" aria-selected="false">🎵 Arts & Culture</button>
           <button class="filter-tab-btn tool-filter-btn" data-category="science" role="tab" aria-selected="false">🔬 Science & Cosmos</button>
@@ -171,7 +182,7 @@
       <div class="container">
         <!-- Status Bar -->
         <div class="games-counter-bar">
-          <span>Showing <strong id="visibleToolsCount" style="color: var(--text-main);">6</strong> interactive discovery apps</span>
+          <span>Showing <strong id="visibleToolsCount" style="color: var(--text-main);">8</strong> interactive discovery apps</span>
           <span>🔒 100% Client-Side Privacy (Zero Remote Data Storage)</span>
         </div>
 
@@ -273,7 +284,47 @@
             </div>
           </article>
 
-          <!-- App 6: Prehistoric Dinosaur Archive -->
+          <!-- App 6: Vital Fuel: Human Nutrition & Health Explorer -->
+          <article class="tool-card" data-category="health" data-tool-url="explorer/nutrition-health/index.html">
+            <div class="tool-card-top">
+              <div class="tool-icon-box" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3);">🥗</div>
+              <span class="tool-tag" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">Nutrition & Health</span>
+            </div>
+            <h3 class="tool-title">The Vital Fuel: Nutrition & Health Explorer</h3>
+            <p class="tool-desc">Comprehensive clinical nutrient archive of 30+ vitamins, minerals, and macros across 60+ whole food sources. Features RDA calculator, daily plate builder, power pairs synergy matrix, and deficiency diagnostic guide.</p>
+            <div class="game-card-tags tool-card-tags">
+              <span class="game-tag-pill">30+ Nutrients</span>
+              <span class="game-tag-pill">60+ Whole Foods</span>
+              <span class="game-tag-pill">RDA Calculator</span>
+              <span class="game-tag-pill">Plate Builder</span>
+            </div>
+            <div class="tool-card-footer">
+              <a href="explorer/nutrition-health/index.html" class="btn btn-secondary btn-sm" title="Open standalone explorer" target="_blank">Direct ↗</a>
+              <a href="explorer/nutrition-health/index.html" class="tool-action-btn" style="flex: 1; text-align: center;">Launch Explorer →</a>
+            </div>
+          </article>
+
+          <!-- App 7: The Chroma Lab: Color Mixing & Spectral Synthesis -->
+          <article class="tool-card" data-category="culture" data-tool-url="explorer/color-mixer/index.html">
+            <div class="tool-card-top">
+              <div class="tool-icon-box" style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.3);">🎨</div>
+              <span class="tool-tag" style="background: rgba(139, 92, 246, 0.15); color: #c4b5fd;">Arts &amp; Optics</span>
+            </div>
+            <h3 class="tool-title">The Chroma Lab: Color Mixing &amp; Synthesis</h3>
+            <p class="tool-desc">Blend 1 to 4 colors with customizable volume percentage ratios in a central live Chroma Orb. Explore realistic subtractive paint vs. additive light physics, copy precision color codes, and master the Chroma Match challenge.</p>
+            <div class="game-card-tags tool-card-tags">
+              <span class="game-tag-pill">4-Bucket Dock</span>
+              <span class="game-tag-pill">Subtractive &amp; Additive</span>
+              <span class="game-tag-pill">1-Click Code Copy</span>
+              <span class="game-tag-pill">Chroma Match</span>
+            </div>
+            <div class="tool-card-footer">
+              <a href="explorer/color-mixer/index.html" class="btn btn-secondary btn-sm" title="Open standalone explorer" target="_blank">Direct ↗</a>
+              <a href="explorer/color-mixer/index.html" class="tool-action-btn" style="flex: 1; text-align: center;">Launch Explorer →</a>
+            </div>
+          </article>
+
+          <!-- App 8: Prehistoric Dinosaur Archive -->
           <article class="tool-card" data-category="biology">
             <div class="tool-card-top">
               <div class="tool-icon-box" style="background: rgba(34, 197, 94, 0.15); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.3);">🦖</div>
@@ -334,10 +385,12 @@
         <div class="footer-col">
           <h4 class="footer-heading">Explorer Topics</h4>
           <ul class="footer-links">
+            <li><a href="explorer/color-mixer/index.html">Color Mixing & Optics</a></li>
+            <li><a href="explorer/nutrition-health/index.html">Nutrition & Health</a></li>
             <li><a href="explorer/animal-encyclopedia/index.html">Animal Kingdom</a></li>
-            <li><a href="explorer.html">World Geography</a></li>
-            <li><a href="explorer.html">Arts & Culture</a></li>
-            <li><a href="explorer.html">Earth & Planetary</a></li>
+            <li><a href="explorer/world-atlas/index.html">World Geography</a></li>
+            <li><a href="explorer/musical-instruments/index.html">Arts & Culture</a></li>
+            <li><a href="explorer/deep-ocean/index.html">Deep Ocean Odyssey</a></li>
           </ul>
         </div>
 
