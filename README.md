@@ -114,32 +114,6 @@ Then visit `http://localhost:8000` in your web browser.
 
 ---
 
-## 🌐 How to Deploy to GitHub Pages (Free Hosting)
-
-1. **Initialize Git & Push to GitHub**:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial launch of Gamility static portal"
-   git branch -M main
-   git remote add origin git@github-personal.com:Mahesh-Yennam/Gamility.git
-   git push -u origin main
-   ```
-
-2. **Enable GitHub Pages**:
-   - Go to your repository on GitHub: `https://github.com/Mahesh-Yennam/Gamility`
-   - Navigate to **Settings** ➔ **Pages**.
-   - Under **Build and deployment**:
-     - **Source**: `Deploy from a branch`
-     - **Branch**: `main` / `/ (root)`
-   - Click **Save**.
-
-3. **Your site is live!**  
-   It is accessible at:  
-   👉 **[https://mahesh-yennam.github.io/Gamility/](https://mahesh-yennam.github.io/Gamility/)**
-
----
-
 ## 🛰️ Hub-and-Spoke Architecture (Adding Individual Apps)
 
 Gamility is designed to act as the central master portal for a network of standalone games, utility tools, and interactive explorers:
