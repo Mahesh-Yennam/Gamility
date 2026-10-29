@@ -38,8 +38,12 @@
 
   <!-- Favicon & PWA -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/icon-192.png">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#0a0e17">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Gamility">
 
   <!-- Google Fonts Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,6 +100,10 @@
 
       <!-- Header Actions -->
       <div class="header-actions">
+        <button id="pwaInstallHeaderBtn" class="btn btn-install-header" style="display: none;" title="Pin Gamility to Taskbar or Desktop">
+          <span class="install-btn-icon">📌</span>
+          <span class="install-btn-label">Pin to Taskbar</span>
+        </button>
         <a href="games.html" class="btn btn-primary btn-sm">Explore All</a>
         <!-- Mobile Hamburger Toggle -->
         <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
@@ -119,6 +127,10 @@
       <li><a href="contact.html" class="drawer-link">✉️ Contact</a></li>
     </ul>
     <div class="drawer-footer">
+      <button id="pwaInstallDrawerBtn" class="btn btn-install-drawer" style="width: 100%; margin-bottom: 0.75rem; display: none;">
+        <span class="install-btn-icon">📲</span>
+        <span class="install-btn-label">Add to Home Screen</span>
+      </button>
       <a href="games.html" class="btn btn-primary" style="width: 100%;">Play Games Now</a>
     </div>
   </aside>

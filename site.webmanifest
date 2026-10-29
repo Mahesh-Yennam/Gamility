@@ -1,16 +1,81 @@
 {
+  "id": "gamility-app",
   "name": "Gamility - Free Games & Utility Tools",
   "short_name": "Gamility",
-  "description": "Play free online web games and access everyday smart utility tools.",
+  "description": "Play free online web games, interactive explorers, and access everyday smart utility tools.",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#0a0e17",
-  "theme_color": "#6366f1",
+  "theme_color": "#0a0e17",
+  "categories": [
+    "games",
+    "utilities",
+    "entertainment"
+  ],
   "icons": [
+    {
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
     {
       "src": "assets/images/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Play Games",
+      "short_name": "Games",
+      "description": "Instant browser games with zero downloads",
+      "url": "./games.html",
+      "icons": [
+        {
+          "src": "assets/images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Utility Tools",
+      "short_name": "Tools",
+      "description": "Everyday smart developer and productivity tools",
+      "url": "./tools.html",
+      "icons": [
+        {
+          "src": "assets/images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Interactive Explorer",
+      "short_name": "Explorer",
+      "description": "Creative interactive canvas and audio experiences",
+      "url": "./explorer.html",
+      "icons": [
+        {
+          "src": "assets/images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }

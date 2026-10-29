@@ -480,6 +480,256 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ==========================================================================
+  // PWA INSTALLATION CONTROLLER (Pin to Taskbar / Desktop & Add to Home Screen)
+  // ==========================================================================
+  let deferredInstallPrompt = null;
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const isMobile = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+
+  // Dynamic relative asset helper (root vs subfolders)
+  function getRelativeRoot() {
+    const p = window.location.pathname;
+    if (p.includes('/tools/') || p.includes('/games/') || p.includes('/explorer/')) {
+      return '../../';
+    }
+    return './';
+  }
+
+  // Toast Helper
+  function showGamilityToast(msg, duration = 4000) {
+    let container = document.getElementById('gamilityToastContainer');
+    if (!container) {
+      container = document.createElement('div');
+      container.id = 'gamilityToastContainer';
+      container.className = 'gamility-toast-container';
+      document.body.appendChild(container);
+    }
+    const toast = document.createElement('div');
+    toast.className = 'gamility-toast';
+    toast.innerHTML = `<span>${msg}</span>`;
+    container.appendChild(toast);
+
+    setTimeout(() => {
+      toast.classList.add('hiding');
+      setTimeout(() => toast.remove(), 350);
+    }, duration);
+  }
+
+  // iOS Safari Guide Modal
+  function createOrGetIosModal() {
+    let modal = document.getElementById('gamilityIosModal');
+    if (!modal) {
+      const rootPath = getRelativeRoot();
+      modal = document.createElement('div');
+      modal.id = 'gamilityIosModal';
+      modal.className = 'gamility-ios-modal-backdrop';
+      modal.innerHTML = `
+        <div class="gamility-ios-sheet">
+          <div class="ios-sheet-header">
+            <div class="ios-sheet-icon">
+              <img src="${rootPath}assets/images/icon-192.png" alt="Gamility Icon">
+            </div>
+            <h3 class="ios-sheet-title">Add Gamility to Home Screen</h3>
+            <p class="ios-sheet-subtitle">Get the app experience with instant 1-tap access</p>
+          </div>
+          <div class="ios-steps-list">
+            <div class="ios-step-item">
+              <div class="ios-step-num">1</div>
+              <div class="ios-step-text">Tap the <span class="ios-step-badge">Share ⎋</span> button in Safari's bottom bar.</div>
+            </div>
+            <div class="ios-step-item">
+              <div class="ios-step-num">2</div>
+              <div class="ios-step-text">Scroll down and tap <span class="ios-step-badge">➕ Add to Home Screen</span>.</div>
+            </div>
+            <div class="ios-step-item">
+              <div class="ios-step-num">3</div>
+              <div class="ios-step-text">Tap <span class="ios-step-badge">Add</span> in the top right corner to finish!</div>
+            </div>
+          </div>
+          <button type="button" class="btn-ios-done" id="gamilityIosDoneBtn">Got It!</button>
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.id === 'gamilityIosDoneBtn') {
+          modal.classList.remove('open');
+        }
+      });
+    }
+    return modal;
+  }
+
+  // Trigger Install Flow
+  async function triggerInstallFlow() {
+    if (deferredInstallPrompt) {
+      try {
+        deferredInstallPrompt.prompt();
+        const choice = await deferredInstallPrompt.userChoice;
+        if (choice && choice.outcome === 'accepted') {
+          showGamilityToast('🎉 Gamility installed! Pin to taskbar or desktop for instant access.');
+        }
+        deferredInstallPrompt = null;
+        hideInstallPrompts();
+      } catch (err) {
+        console.warn('Install error:', err);
+      }
+    } else if (isIOS) {
+      const modal = createOrGetIosModal();
+      modal.classList.add('open');
+    } else {
+      // Fallback for browsers without beforeinstallprompt or desktop manual
+      showGamilityToast('💡 Tip: Use your browser menu (⋮ or ⋯) to "Install Gamility" or "Add to Desktop".', 5000);
+    }
+  }
+
+  // Update Buttons & Pill
+  function showInstallPrompts() {
+    if (isStandalone) return;
+
+    const labelText = isMobile ? 'Add to Home' : 'Pin to Taskbar';
+    const iconText = isMobile ? '📲' : '📌';
+    const descText = isMobile ? 'Add to your phone home screen for 1-tap play' : 'Pin to Windows Taskbar or Desktop for 1-click access';
+
+    // 1. Header Install Button
+    let headerBtn = document.getElementById('pwaInstallHeaderBtn');
+    if (!headerBtn) {
+      const headerActions = document.querySelector('.header-actions');
+      if (headerActions) {
+        headerBtn = document.createElement('button');
+        headerBtn.id = 'pwaInstallHeaderBtn';
+        headerBtn.className = 'btn-install-header';
+        headerBtn.setAttribute('title', isMobile ? 'Add to Home Screen' : 'Pin to Taskbar or Desktop');
+        headerBtn.innerHTML = `<span class="install-btn-icon">${iconText}</span><span class="install-btn-label">${labelText}</span>`;
+        // Insert before explore button or mobile toggle
+        headerActions.insertBefore(headerBtn, headerActions.firstChild);
+      }
+    }
+    if (headerBtn) {
+      headerBtn.style.display = 'inline-flex';
+      const labelEl = headerBtn.querySelector('.install-btn-label');
+      if (labelEl) labelEl.textContent = labelText;
+      headerBtn.onclick = triggerInstallFlow;
+    }
+
+    // 2. Mobile Drawer Install Button
+    let drawerBtn = document.getElementById('pwaInstallDrawerBtn');
+    if (!drawerBtn) {
+      const drawerFooter = document.querySelector('.drawer-footer');
+      if (drawerFooter) {
+        drawerBtn = document.createElement('button');
+        drawerBtn.id = 'pwaInstallDrawerBtn';
+        drawerBtn.className = 'btn-install-drawer';
+        drawerBtn.style.width = '100%';
+        drawerBtn.style.marginBottom = '0.75rem';
+        drawerBtn.innerHTML = `<span class="install-btn-icon">${iconText}</span><span class="install-btn-label">${labelText}</span>`;
+        drawerFooter.insertBefore(drawerBtn, drawerFooter.firstChild);
+      }
+    }
+    if (drawerBtn) {
+      drawerBtn.style.display = 'inline-flex';
+      const drawerLabelEl = drawerBtn.querySelector('.install-btn-label');
+      if (drawerLabelEl) drawerLabelEl.textContent = labelText;
+      drawerBtn.onclick = () => {
+        if (typeof closeDrawer === 'function') closeDrawer();
+        triggerInstallFlow();
+      };
+    }
+
+    // 3. Floating Install Pill (if not dismissed within 7 days)
+    const dismissedTime = localStorage.getItem('gamility_install_dismissed');
+    const now = Date.now();
+    const sevenDays = 7 * 24 * 60 * 60 * 1000;
+    if (!dismissedTime || (now - parseInt(dismissedTime, 10)) > sevenDays) {
+      let pill = document.getElementById('gamilityInstallPill');
+      if (!pill) {
+        const rootPath = getRelativeRoot();
+        pill = document.createElement('div');
+        pill.id = 'gamilityInstallPill';
+        pill.className = 'gamility-install-pill';
+        pill.innerHTML = `
+          <div class="install-pill-icon-wrap">
+            <img src="${rootPath}assets/images/icon-192.png" alt="Gamility Logo">
+          </div>
+          <div class="install-pill-content">
+            <div class="install-pill-title">Gamility App <span>⚡</span></div>
+            <div class="install-pill-desc">${descText}</div>
+          </div>
+          <div class="install-pill-actions">
+            <button type="button" class="btn-pill-install" id="gamilityPillInstallBtn">Install</button>
+            <button type="button" class="btn-pill-close" id="gamilityPillCloseBtn" title="Dismiss">✕</button>
+          </div>
+        `;
+        document.body.appendChild(pill);
+
+        document.getElementById('gamilityPillInstallBtn')?.addEventListener('click', triggerInstallFlow);
+        document.getElementById('gamilityPillCloseBtn')?.addEventListener('click', () => {
+          localStorage.setItem('gamility_install_dismissed', Date.now().toString());
+          pill.classList.add('hiding');
+          setTimeout(() => pill.remove(), 350);
+        });
+      }
+    }
+  }
+
+  function hideInstallPrompts() {
+    const headerBtn = document.getElementById('pwaInstallHeaderBtn');
+    if (headerBtn) headerBtn.style.display = 'none';
+
+    const drawerBtn = document.getElementById('pwaInstallDrawerBtn');
+    if (drawerBtn) drawerBtn.style.display = 'none';
+
+    const pill = document.getElementById('gamilityInstallPill');
+    if (pill) {
+      pill.classList.add('hiding');
+      setTimeout(() => pill.remove(), 350);
+    }
+  }
+
+  // Listen for beforeinstallprompt event
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    showInstallPrompts();
+  });
+
+  // Listen for appinstalled event
+  window.addEventListener('appinstalled', () => {
+    deferredInstallPrompt = null;
+    hideInstallPrompts();
+    showGamilityToast('🎉 Welcome to Gamility! Pin it to your taskbar or home screen for quick access.');
+  });
+
+  // Show prompts on iOS if uninstalled
+  if (isIOS && !isStandalone) {
+    showInstallPrompts();
+  }
+
+  // Register Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      const swUrl = `${getRelativeRoot()}sw.js`;
+      navigator.serviceWorker.register(swUrl)
+        .then(reg => {
+          reg.addEventListener('updatefound', () => {
+            const installing = reg.installing;
+            if (installing) {
+              installing.addEventListener('statechange', () => {
+                if (installing.state === 'installed' && navigator.serviceWorker.controller) {
+                  // SW installed and active
+                }
+              });
+            }
+          });
+        })
+        .catch(err => {
+          // Silently handle if unsupported protocol
+        });
+    });
+  }
 });
 
 
