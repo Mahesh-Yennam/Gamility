@@ -182,12 +182,52 @@
       <div class="container">
         <!-- Status Bar -->
         <div class="games-counter-bar">
-          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">21</strong> games</span>
+          <span>Showing <strong id="visibleGamesCount" style="color: var(--text-main);">22</strong> games</span>
           <span>⚡ Instant in-browser play</span>
         </div>
 
         <!-- Games Grid -->
         <div class="cards-grid" id="gamesGrid">
+          
+          <!-- Game: Click the Circle -->
+          <article class="game-card" data-category="arcade casual" data-controls="Mouse Click / Tap Screen" data-game-url="https://mahesh-yennam.github.io/click-the-circle/">
+            <div class="game-card-media">
+              <span class="game-badge" style="background: rgba(236, 72, 153, 0.2); color: #ec4899; border: 1px solid rgba(236, 72, 153, 0.35);">Reflex Arcade</span>
+              <span class="game-rating-tag">★ 4.9</span>
+              <div class="game-card-thumb-art">
+                <svg class="svg-art-icon" viewBox="0 0 64 64" fill="none">
+                  <circle cx="32" cy="32" r="28" fill="#ec4899" fill-opacity="0.2"/>
+                  <!-- Glowing Target Ring -->
+                  <circle cx="32" cy="32" r="20" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4 2"/>
+                  <!-- Target Core -->
+                  <circle cx="32" cy="32" r="14" fill="#f43f5e" fill-opacity="0.3" stroke="#fda4af" stroke-width="2"/>
+                  <!-- Bullseye Center -->
+                  <circle cx="32" cy="32" r="6" fill="#f43f5e"/>
+                  <circle cx="32" cy="32" r="2" fill="#ffffff"/>
+                  <!-- Crosshair lines -->
+                  <line x1="32" y1="6" x2="32" y2="14" stroke="#fda4af" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="32" y1="50" x2="32" y2="58" stroke="#fda4af" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="6" y1="32" x2="14" y2="32" stroke="#fda4af" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="50" y1="32" x2="58" y2="32" stroke="#fda4af" stroke-width="1.8" stroke-linecap="round"/>
+                  <!-- Click Pointer Cursor -->
+                  <path d="M42 42 L36 26 L26 36 L30 38 L25 47 L29 49 L34 40 Z" fill="#38bdf8" stroke="#0f172a" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="game-card-body">
+              <div class="game-card-tags">
+                <span class="game-tag-pill">30s Reflex</span>
+                <span class="game-tag-pill">Speed Run</span>
+                <span class="game-tag-pill">High Score</span>
+              </div>
+              <h3 class="game-card-title">Click the Circle</h3>
+              <p class="game-card-desc">Fast-paced 30-second reflex arcade! Click the glowing target as quickly as possible with surgical speed to build multipliers and set high scores.</p>
+              <div class="game-card-footer">
+                <a href="https://mahesh-yennam.github.io/click-the-circle/" class="btn btn-secondary btn-sm" title="Open standalone game page" target="_blank">Direct ↗</a>
+                <a href="https://mahesh-yennam.github.io/click-the-circle/" class="game-play-btn" style="flex: 1; text-align: center;" target="_blank">Play Now ▶</a>
+              </div>
+            </div>
+          </article>
           
           <!-- Game: Math Chain Quest -->
           <article class="game-card" data-category="educational" data-controls="Click / Tap Cards / Keys 1-4" data-game-url="https://mahesh-yennam.github.io/Math-Chain-Quest/">
